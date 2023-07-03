@@ -24,10 +24,10 @@ func main() {
 	capacity := 1_000_000
 	mc := memcache.New(nodes, capacity, memcache.NewLRU) // Or use `memcache.NewLFU`
 
-  // If no nodes are needed, use:
-  // mc := meme.NewLRU(capacity)
-  // Or
-  // mc := meme.NewLFU(capacity)
+	// If no nodes are needed, use:
+	// mc := meme.NewLRU(capacity)
+	// Or
+	// mc := meme.NewLFU(capacity)
 
 	var value interface{}
 	var ok bool
