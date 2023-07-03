@@ -27,5 +27,4 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         files: ./coverage.txt
-    - name: Update Example readme
-      uses: dineshsonachalam/markdown-autodocs@v1.0.4
+        
