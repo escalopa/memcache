@@ -51,20 +51,7 @@ func main() {
 	fmt.Println(value, ok)
 	// Output: bar true
 }
-
 ```
-
-### LFU
-
-```go
-package main
-
-import (
-  "fmt"
-
-  "github.com/escalopa/memcache"
-)
-
 
 ## About 
 
