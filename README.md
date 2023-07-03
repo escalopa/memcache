@@ -1,4 +1,6 @@
-# memcache [![GoDoc](https://godoc.org/github.com/yeqown/memcache?status.svg)](https://godoc.org/github.com/yeqown/memcache) [![Go Report Card](https://goreportcard.com/badge/github.com/yeqown/memcache)](https://goreportcard.com/report/github.com/yeqown/memcache) [![codecov](https://codecov.io/gh/yeqown/memcache/branch/master/graph/badge.svg)](https://codecov.io/gh/yeqown/memcache) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fyeqown%2Fmemcache.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fyeqown%2Fmemcache?ref=badge_shield)
+# memcache 📚
+
+[![Go Report Card](https://goreportcard.com/badge/github.com/escalopa/memcache)](https://goreportcard.com/report/github.com/escalopa/memcache) [![codecov](https://codecov.io/gh/escalopa/memcache/branch/main/graph/badge.svg?token=GYCQFM7WUM)](https://codecov.io/gh/escalopa/memcache) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fescalopa%2Fmemcache.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fescalopa%2Fmemcache?ref=badge_shield)
 
 DHT cache, Built with consitent hashing &amp; LRU/LFU cache
 
