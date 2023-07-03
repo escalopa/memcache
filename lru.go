@@ -39,7 +39,7 @@ type lruCache struct {
 }
 
 // NewLRU returns a new instance of lruCache with the given capacity
-func NewLRU(capacity int) *lruCache {
+func NewLRU(capacity int) Cache {
 	if capacity <= 0 {
 		panic("NewLRU: capacity must be greater than 0")
 	}

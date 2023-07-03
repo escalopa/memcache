@@ -2,6 +2,8 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/escalopa/memcache)](https://goreportcard.com/report/github.com/escalopa/memcache) [![codecov](https://codecov.io/gh/escalopa/memcache/branch/main/graph/badge.svg?token=GYCQFM7WUM)](https://codecov.io/gh/escalopa/memcache) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fescalopa%2Fmemcache.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fescalopa%2Fmemcache?ref=badge_shield)
 
+[![DeepSource](https://app.deepsource.com/gh/escalopa/memcache.svg/?label=active+issues&show_trend=true&token=le3CGl9jnv3HKOckiiT5r1pE)](https://app.deepsource.com/gh/escalopa/memcache/?ref=repository-badge)
+
 DHT cache, Built with consitent hashing &amp; LRU/LFU cache
 
 ## Example

@@ -9,7 +9,7 @@ import (
 func main() {
 	nodes := 1_000
 	capacity := 1_000_000
-	mc := memcache.New(nodes, capacity, memcache.WithLRU) // Or use `memcache.WithLFU`
+	mc := memcache.New(nodes, capacity, memcache.NewLRU) // Or use `memcache.NewLFU`
 
 	var value interface{}
 	var ok bool

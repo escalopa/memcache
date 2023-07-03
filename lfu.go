@@ -45,7 +45,7 @@ type lfuCache struct {
 }
 
 // NewLFU returns a new instance of lfuCache with the given capacity
-func NewLFU(capacity int) *lfuCache {
+func NewLFU(capacity int) Cache {
 	if capacity <= 0 {
 		panic("NewLFU: capacity must be greater than 0")
 	}

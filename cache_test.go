@@ -18,21 +18,21 @@ func TestNew(t *testing.T) {
 			name:         "nodes is zero",
 			nodes:        0,
 			capacity:     1,
-			newCacheImpl: WithLRU,
+			newCacheImpl: NewLRU,
 			expPanic:     true,
 		},
 		{
 			name:         "capacity is zero",
 			nodes:        1,
 			capacity:     0,
-			newCacheImpl: WithLRU,
+			newCacheImpl: NewLRU,
 			expPanic:     true,
 		},
 		{
 			name:         "success",
 			nodes:        1,
 			capacity:     1,
-			newCacheImpl: WithLRU,
+			newCacheImpl: NewLRU,
 			expPanic:     false,
 		},
 	}
@@ -73,7 +73,7 @@ func TestHashKey(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			mc := New(tt.nodes, 10, WithLRU)
+			mc := New(tt.nodes, 10, NewLRU)
 			got := mc.hashKey(tt.key)
 			if got >= tt.nodes {
 				t.Errorf("expected less than %d, got %d", tt.nodes, got)
@@ -95,7 +95,7 @@ func TestMemCacheGet(t *testing.T) {
 			name:         "success",
 			nodes:        1,
 			capacity:     1,
-			newCacheImpl: WithLRU,
+			newCacheImpl: NewLRU,
 
 			key: "foo",
 		},
@@ -103,7 +103,7 @@ func TestMemCacheGet(t *testing.T) {
 			name:         "success",
 			nodes:        1,
 			capacity:     1,
-			newCacheImpl: WithLFU,
+			newCacheImpl: NewLFU,
 
 			key: "foo",
 		},
@@ -134,7 +134,7 @@ func TestMemCacheSet(t *testing.T) {
 			name:         "success",
 			nodes:        1,
 			capacity:     1,
-			newCacheImpl: WithLRU,
+			newCacheImpl: NewLRU,
 
 			key:   "foo",
 			value: "bar",
@@ -143,7 +143,7 @@ func TestMemCacheSet(t *testing.T) {
 			name:         "success",
 			nodes:        1,
 			capacity:     1,
-			newCacheImpl: WithLFU,
+			newCacheImpl: NewLFU,
 
 			key:   "foo",
 			value: "bar",
@@ -175,7 +175,7 @@ func TestMemCacheDelete(t *testing.T) {
 			name:         "success LRU",
 			nodes:        1,
 			capacity:     1,
-			newCacheImpl: WithLRU,
+			newCacheImpl: NewLRU,
 
 			key: "foo",
 		},
@@ -183,7 +183,7 @@ func TestMemCacheDelete(t *testing.T) {
 			name:         "success LFU",
 			nodes:        1,
 			capacity:     1,
-			newCacheImpl: WithLFU,
+			newCacheImpl: NewLFU,
 
 			key: "foo",
 		},

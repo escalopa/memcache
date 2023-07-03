@@ -40,16 +40,6 @@ func New(nodes int, capacity int, newCacheImpl func(int) Cache) *memCache {
 	}
 }
 
-// WithLFU returns a new instance of memCache with the given capacity
-func WithLFU(capacity int) Cache {
-	return NewLFU(capacity)
-}
-
-// WithLRU returns a new instance of memCache with the given capacity
-func WithLRU(capacity int) Cache {
-	return NewLRU(capacity)
-}
-
 // Get returns the value for the given key
 func (mc *memCache) Get(key string) (value interface{}, ok bool) {
 	id := mc.hashKey(key)
