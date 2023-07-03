@@ -8,6 +8,8 @@ DHT cache, Built with consitent hashing &amp; LRU/LFU cache
 
 ## Example
 
+### Memcache
+
 ```go
 package main
 
@@ -21,6 +23,11 @@ func main() {
 	nodes := 1_000
 	capacity := 1_000_000
 	mc := memcache.New(nodes, capacity, memcache.NewLRU) // Or use `memcache.NewLFU`
+
+  // If no nodes are needed, use:
+  // mc := meme.NewLRU(capacity)
+  // Or
+  // mc := meme.NewLFU(capacity)
 
 	var value interface{}
 	var ok bool
@@ -46,6 +53,18 @@ func main() {
 }
 
 ```
+
+### LFU
+
+```go
+package main
+
+import (
+  "fmt"
+
+  "github.com/escalopa/memcache"
+)
+
 
 ## About 
 
